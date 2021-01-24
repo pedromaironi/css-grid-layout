@@ -20,7 +20,7 @@ body {
     Una manera de juntar las propiedades Column y Row es: 
      Grid-template: filas / columnas. 
      */
-    grid-template: 200px 100px 200px / 100px 200px;
+    grid-template: 200px 100px 200px 200px 200px / 100px 200px;
 }
 
 .container .item {

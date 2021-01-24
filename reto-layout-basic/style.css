@@ -26,20 +26,6 @@ body {
     text-align: center;
     color: white;
     padding: 1.0rem;
-    /*
-    Definir el tamaño de columnas | En este caso 3 
-    otra forma grid-template-columns: repeat(4,200px); 
-    grid-template-columns: 200px 100px 200px;
-    grid-template-rows: repeat(100px);
-    Una manera de juntar las propiedades Column y Row es: 
-     Grid-template: filas / columnas. */
-    /*FR = Fraccion*/
-    /* Unidad de medida: fracciones fr distrubuye el espacio disponible en formas iguales.
-    Funciones:
-    repeat(cantidad, valor) para usar el mismo valor varias veces
-    minmax(min, max) agregar un valor minimo y maximo para el tamaño al hacer responsive*/
-    /* grid-column-gap: 1.0rem; */
-    /* grid-row-gap: 1.0rem; */
 }
 
 .container .container--item {
