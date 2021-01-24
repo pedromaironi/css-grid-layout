@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --header-color: #518ecf;
+    --aside-color: #ea702b;
+    --main-color: #9c9a9c;
+    --footer-color: #66a23f;
+}
+
+body {
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: grid;
+    font-size: 1.0rem;
+    height: 100%;
+    width: 100%;
+    grid-template: 100px 300px 100px / 100%;
+    grid-row-gap: 1.0rem;
+    text-align: center;
+    color: white;
+    padding: 1.0rem;
+    /*
+    Definir el tamaño de columnas | En este caso 3 
+    otra forma grid-template-columns: repeat(4,200px); 
+    grid-template-columns: 200px 100px 200px;
+    grid-template-rows: repeat(100px);
+    Una manera de juntar las propiedades Column y Row es: 
+     Grid-template: filas / columnas. */
+    /*FR = Fraccion*/
+    /* Unidad de medida: fracciones fr distrubuye el espacio disponible en formas iguales.
+    Funciones:
+    repeat(cantidad, valor) para usar el mismo valor varias veces
+    minmax(min, max) agregar un valor minimo y maximo para el tamaño al hacer responsive*/
+    /* grid-column-gap: 1.0rem; */
+    /* grid-row-gap: 1.0rem; */
+}
+
+.container .container--item {
+    display: flex;
+    background: lightblue;
+    padding: 10px;
+    border: 1px solid black;
+    justify-content: center;
+}
+
+.container .container--item:nth-of-type(2) {
+    background: white;
+    border: 0;
+}
+
+
+/* Header */
+
+.container .container--item.header {
+    border-radius: 0.5rem;
+    background: var(--header-color);
+}
+
+
+/* Footer */
+
+.container .container--item.footer {
+    border-radius: 0.5rem;
+    background: var(--footer-color);
+}
+
+
+/* Main Container */
+
+.container .container--item.main {
+    display: grid;
+    column-gap: 1.0rem;
+    grid-template: 100% / 20% 80%;
+}
+
+.container .container--item__main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    background: var(--main-color);
+}
+
+.container .container--item__aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    background: var(--aside-color);
+}
+
+
+/* 
+.item:nth-of-type(4) {
+    background: blue;
+    display: grid;
+    grid-template: 50PX 50px 50px 50px100px 100px 100px 100px 100px;
+    overflow: auto;
+} */
