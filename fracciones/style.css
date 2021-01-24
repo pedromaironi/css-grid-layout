@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: grid;
+    font-size: 1.0rem;
+    /*
+    Definir el tamaño de columnas | En este caso 3 
+    otra forma grid-template-columns: repeat(4,200px); 
+    grid-template-columns: 200px 100px 200px;
+    grid-template-rows: repeat(100px);
+    Una manera de juntar las propiedades Column y Row es: 
+     Grid-template: filas / columnas. */
+    /*FR = Fraccion*/
+    /* Unidad de medida: fracciones fr distrubuye el espacio disponible en formas iguales.
+    Funciones:
+    repeat(cantidad, valor) para usar el mismo valor varias veces
+    minmax(min, max) agregar un valor minimo y maximo para el tamaño al hacer responsive*/
+    grid-template: 200px 100px 200px / 1fr 1fr 1fr;
+    /* grid-column-gap: 1.0rem; */
+    /* grid-row-gap: 1.0rem; */
+    grid-gap: 1.0rem 1.0rem;
+    gap: 1.0rem;
+}
+
+.container .item {
+    background: lightblue;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.item:nth-of-type(4) {
+    background: blue;
+    display: grid;
+    grid-template: 50PX 50px 50px 50px100px 100px 100px 100px 100px;
+    overflow: auto;
+}
