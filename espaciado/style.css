@@ -21,20 +21,21 @@ body {
      Grid-template: filas / columnas. 
      */
     grid-template: 200px 100px 200px / 500px 100px 300px;
+    /* grid-column-gap: 1.0rem; */
+    /* grid-row-gap: 1.0rem; */
+    grid-gap: 1.0rem 1.0rem;
+    gap: 1.0rem;
 }
 
 .container .item {
     background: lightblue;
     padding: 10px;
     border: 1px solid black;
-    /* Malas practicas */
-    /* margin-right: 10px; */
-    /* margin-bottom: 10px; */
 }
 
 .item:nth-of-type(4) {
     background: blue;
     display: grid;
-    grid-template: 50PX 50px 50px 50px / 100px 100px 100px 100px 100px;
+    grid-template: 50PX 50px 50px 50px100px 100px 100px 100px 100px;
     overflow: auto;
 }
